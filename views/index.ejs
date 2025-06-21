@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Joke Generator</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>I will tell you a funny joke!!<br> What is your name?</br></h1>
+      <p class="tagline">Enter your first and last name for a real knee-slapper</p>
+    </header>
+
+    <form action="/joke" method="POST">
+      <div class="input-group">
+        <input type="text" name="firstName" placeholder="First Name" required aria-label="First Name">
+        <input type="text" name="lastName" placeholder="Last Name" required aria-label="Last Name">
+      </div>
+      <button type="submit">Get My Joke!</button>
+    </form>
+  </div>
+</body>
+</html>

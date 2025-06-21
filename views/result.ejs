@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Joke</title>
+  <link rel="stylesheet" href="/style.css"> <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>
+        <% if (error) { %>
+          Uh oh!! Jokes are not working at the moment...
+        <% } else { %>
+          Here is your custom joke for you!!
+        <% } %>
+      </h1>
+      <p class="tagline">
+        <% if (error) { %>
+          Sorry about the issue, working on it!!
+        <% } else { %>
+          Get ready to chuckle...
+        <% } %>
+      </p>
+    </header>
+
+    <section class="joke-output-section">
+      <% if (error) { %>
+        <h2><%= error %></h2>
+        <a href="/" class="small-button">Try again</a> <% } else { %>
+        <h2>Hey <%= name %>, here’s your joke:</h2>
+        <p class="joke-text"><%= joke %></p>
+        <a href="/" class="small-button">More jokes this way!</a> <% } %>
+    </section>
+  </div>
+</body>
+</html>
